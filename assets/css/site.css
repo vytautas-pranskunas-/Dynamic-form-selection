@@ -1,0 +1,11 @@
+﻿.top-buffer {
+    padding-top: 20px;
+}
+
+.highlightedText {
+    background: orange;
+}
+
+.error-message {
+    color: #a94442
+}

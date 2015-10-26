@@ -1,0 +1,5 @@
+﻿<div class="form-group" ng-class="{'has-error': (form['{{ ::item.name }}'].$dirty || submitAttempted) && form['{{ ::item.name }}'].$invalid}">
+    <label for="{{ ::item.name }}" class="col-sm-2 control-label">{{ ::item.label }}<span ng-show="isRequired(item)" class="error-message"> <strong>*</strong></span></label>
+    <div class="col-sm-5" compile ng-bind-html="getInputElement(item)"></div>
+    <div class="col-sm-5" compile ng-bind-html="getValidations(item)"></div>
+</div>

@@ -1,0 +1,20 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ ::title }}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="checkbox" ng-show="filteredItems.length == listItems.length">
+            <label>
+                <input type="checkbox" ng-click="checkAll()" ng-model="selectedAll">
+                <span>Select all</span>
+            </label>
+        </div>
+        <div class="checkbox" ng-repeat="field in filteredItems = (listItems | filter:filterText | orderBy:'label')">
+            <label>
+                <input type="checkbox" ng-model="field.isSelected">
+                <span ng-bind-html="highlightText(field.label, searchText)"></span>
+            </label>
+        </div>
+        <p ng-show="filteredItems.length == 0">There are no items</p>
+    </div>
+</div>

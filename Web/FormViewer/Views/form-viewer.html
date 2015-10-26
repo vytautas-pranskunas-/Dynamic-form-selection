@@ -1,0 +1,26 @@
+﻿<div ng-controller="FormViewerController as c">
+    <form class="form-horizontal top-buffer" name="editForm" novalidate submit-attempt>
+        
+        <div ng-show="c.model.personDetailsFields.length > 0">
+            <h3>Person details</h3>
+            <hr />
+            <div ng-repeat="item in c.model.personDetailsFields | orderBy:'label'" ng-form="innerForm">
+                <form-element form="innerForm" item="item" submit-attempted="submitAttempted"></form-element>
+            </div>
+        </div>
+        
+        <div ng-show="c.model.addressDetailsFields.length > 0">
+            <h3>Address details</h3>
+            <hr />
+            <div ng-repeat="item in c.model.addressDetailsFields | orderBy:'label'" ng-form="innerForm">
+                <form-element form="innerForm" item="item" submit-attempted="submitAttempted"></form-element>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" ng-click="editForm.$valid && c.save()" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

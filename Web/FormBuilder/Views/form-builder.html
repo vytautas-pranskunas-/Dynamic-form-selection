@@ -1,0 +1,26 @@
+﻿<div ng-controller="FormBuilderController as c">
+    <form class="form-horizontal top-buffer">
+        <div class="form-group">
+            <label for="filterInput" class="col-sm-3 control-label">Filter form elements</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="filterInput" ng-model="c.searchText" placeholder="Type to search"/>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-4">
+                <form-builder-panel title="Person Details" list-items="c.model.personDetailsFields" search-text="c.searchText"></form-builder-panel>
+            </div>
+            <div class="col-sm-4">
+                <form-builder-panel title="Address Details" list-items="c.model.addressDetailsFields" search-text="c.searchText"></form-builder-panel>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary" ng-click="c.save()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dynamic Form Selection</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="assets/css/angular-csp.css" rel="stylesheet" />
+    <link href="assets/css/site.css" rel="stylesheet" />
+</head>
+<body ng-app="dynamicForm">
+
+<div id="viewport" class="ng-cloak">
+    <div class="container">
+        <div ui-view="header"></div>
+        <div ui-view="content"></div>
+    </div>
+</div>
+
+    <script src="assets/js/angularjs/angular.js"></script>
+    <script src="assets/js/angularjs/angular-ui-router.js"></script>
+    <script src="assets/js/lodash.min.js"></script>
+
+    <script src="Web/App/Controllers/HeaderController.js"></script>
+    <script src="Web/App/AppStructure.js"></script>
+
+    <script src="Web/FormBuilder/Controllers/FormBuilderController.js"></script>
+    <script src="Web/FormBuilder/Services/FormBuilderService.js"></script>
+    <script src="Web/FormBuilder/Directives/FormBuilderPanelDirective.js"></script>
+    <script src="Web/FormBuilder/FormBuilder.js"></script>
+    
+    <script src="Web/FormViewer/Controllers/FormViewerController.js"></script>
+    <script src="Web/FormViewer/Directives/FormElementDirective.js"></script>
+    <script src="Web/FormViewer/FormViewer.js"></script>
+
+    <script src="Web/Shared/Services/DataStoreService.js"></script>
+    <script src="Web/Shared/Directives/SubmitAttemptDirective.js"></script>
+    <script src="Web/Shared/Directives/CompileDirective.js"></script>
+    <script src="Web/Shared/Shared.js"></script>
+
+    <script src="Web/App.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<header class="suit-main-header" ng-controller="HeaderController as c">
+    <div class="page-header">
+        <h1>Dynamic form selection app</h1>
+    </div>
+ 
+    <ul class="nav nav-tabs">
+        <li ng-repeat="menuItem in ::c.menu" ng-class="{active: c.isActive(menuItem)}">
+            <a data-ui-sref="{{ ::menuItem.sref }}"><span>{{::menuItem.name}}</span></a>
+        </li>
+    </ul>
+</header>
